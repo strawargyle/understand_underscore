@@ -7,19 +7,24 @@ h4 {
 h1, h2, h3, h4, h5, h6 {
    font-family: 'VT323', ;
 }
+body {
+   font-family: 'Inconsolata', ;
+   font-size: 1.7rem;
+}
 .header {
    margin-top: 5rem;
    text-align: center;
    margin-left: 15%;
    margin-right: 15%;
-   border-bottom: 1px solid black;
+   border-bottom: 1px inset black;
 }
 .value-img {
    display: block;
    text-align: center;
    margin: auto;
-   height: 150px;
-   width: 150px;
+   margin-bottom: 50px;
+   height: 80px;
+   width: 260px;
 }
 .value-prop {
    margin-top: 1rem;
@@ -36,10 +41,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar, .navbar-spacer {
    display: block;
-   width: 100%;
+   width: 80%;
    height: 3.5rem;
    background: #fff;
-   margin-top: 2rem;
 }
 .navbar-spacer {
    display: none;
@@ -50,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-list {
    list-style: none;
    margin-bottom: 0;
+   /*border-bottom: 1px solid #1c1c1c;*/
 }
 .navbar-item {
    display: inline;
@@ -58,14 +63,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-link {
    text-transform: uppercase;
-   font-size: 1.2em;
+   font-size: 1em;
    font-weight: 600;
+   font-family: 'Inconsolata', ;
    letter-spacing: .2rem;
-   margin-right: 22%;
-   margin-left: 22%;
+   margin-right: 2px;
+   margin-left: 9%;
    text-decoration: none;
    line-height: 6.5rem;
-   color: #222;
+   color: #1c1c1c;
 }
 .navbar-link.active {
    color: #009688;
@@ -82,6 +88,15 @@ h1, h2, h3, h4, h5, h6 {
    margin-bottom: 0;
    font-size: 2rem;
    font-family: 'VT323', ;
+}
+.docs-section-center {
+   text-align: center;
+   width: 70%;
+   padding: 4rem 0;
+   margin-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: auto;
 }
 .inline {
    opacity: 0;
@@ -140,11 +155,27 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0 20px;
    box-sizing: border-box;
 }
-.code-example {
+.container-code-wel {
+   position: relative;
+   text-align: left;
+   width: 100%;
+   max-width: 800px;
+   margin: auto;
+   box-sizing: border-box;
+}
+.container-code-wel2 {
+   position: relative;
+   text-align: left;
+   width: 100%;
+   max-width: 700px;
+   margin: auto;
+   box-sizing: border-box;
+}
+/*.code-example {
    margin-top: 1.5rem;
    margin-bottom: 0;
 }
 .code-example-body {
    white-space: pre;
    word-wrap: break-word text-align: left;
-}
+}*/
