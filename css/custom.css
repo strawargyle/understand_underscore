@@ -1,14 +1,10 @@
 h1 {
-   font-family: 'VT323', ;
+   text-align: right;
 }
 h4 {
-   font-family: 'VT323', ;
+   text-align: right;
 }
-h6 {
-   font-family: 'VT323', ;
-   color:#cd4141;
-}
-#date {
+h1, h2, h3, h4, h5, h6 {
    font-family: 'VT323', ;
 }
 .header {
@@ -16,20 +12,12 @@ h6 {
    text-align: center;
    margin-left: 15%;
    margin-right: 15%;
+   border-bottom: 1px solid black;
 }
 .value-img {
    display: block;
    text-align: center;
    margin: auto;
-   height: 150px;
-   width: 150px;
-}
-.value-img-year {
-   display: block;
-   text-align: center;
-   margin:auto;
-   margin-bottom: 75px;
-   margin-top: 90px;
    height: 150px;
    width: 150px;
 }
@@ -49,11 +37,9 @@ h6 {
 .navbar, .navbar-spacer {
    display: block;
    width: 100%;
-   height: 6.5rem;
+   height: 3.5rem;
    background: #fff;
-   margin-top: 5rem;
-   border-top: 1px solid #eee;
-   border-bottom: 1px solid #eee;
+   margin-top: 2rem;
 }
 .navbar-spacer {
    display: none;
@@ -72,11 +58,11 @@ h6 {
 }
 .navbar-link {
    text-transform: uppercase;
-   font-size: 12px;
+   font-size: 1.2em;
    font-weight: 600;
    letter-spacing: .2rem;
-   margin-right: 1.8rem;
-   margin-left: 1.8rem;
+   margin-right: 22%;
+   margin-left: 22%;
    text-decoration: none;
    line-height: 6.5rem;
    color: #222;
