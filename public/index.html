@@ -63,9 +63,24 @@
       <section>
          <div id="welcome" class="docs-section-center">
             <img class="value-img" src="https://static1.squarespace.com/static/ta/522a22cbe4b04681b0bff826/2392/assets/img/hack-reactor-logo.png">
-            <p>This is the Hackathon 2015 project from the Hack Reactor Remote Prep course. Playing around with Javascript and jQuery.</p>
-            <p>The purpose of the site is...</p>
-            <p>Made by ...</p>
+            <p style="font-family: 'Inconsolata'">This is the Hackathon 2015 project from the <br>Hack Reactor Remote Prep course. <br>Playing around with Javascript and jQuery.</p>
+         <div class="container-code-wel">
+            <pre>
+               <code class "hmtl">
+            Understand the power and convenience of using
+            the Underscore.js library. We have organized
+            the most used functions and broken them down
+            in order to better understand their inner workings.
+
+            We have no idea what we are doing.
+               </code>
+            </pre>
+         </div>
+            <p style="font-family: 'Inconsolata'">Made by:</p>
+            <h5 style="font-family: 'Inconsolata'">Mitchell Blank</h5>
+            <h5 style="font-family: 'Inconsolata'">James Mitchell</h5>
+            <h5 style="font-family: 'Inconsolata'">Jonny Nguyen</h5>
+            <h5 style="font-family: 'Inconsolata'">Matthew Preiser</h5>
          </div>
       </section>
    </div>
@@ -127,10 +142,12 @@
       $('#home').click(function() {
          $('.container-code').hide();
          $('#welcome').hide().fadeIn(1800);
+         $('#container-code-wel').hide().fadeIn(1800);
       });
 
       $('#showall').click(function() {
          $('#welcome').hide();
+         $('#container-code-wel').hide();
          $('.container-code').hide().fadeIn(1800);
       });
    </script>

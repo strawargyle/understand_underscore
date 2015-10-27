@@ -7,6 +7,10 @@ h4 {
 h1, h2, h3, h4, h5, h6 {
    font-family: 'VT323', ;
 }
+body {
+   font-family: 'Inconsolata', ;
+   font-size: 1.7rem;
+}
 .header {
    margin-top: 5rem;
    text-align: center;
@@ -58,13 +62,13 @@ h1, h2, h3, h4, h5, h6 {
    margin-bottom: 0;
 }
 .navbar-link {
-   /*text-transform: uppercase;*/
+   text-transform: uppercase;
    font-size: 1.1em;
    font-weight: 600;
    font-family: 'Inconsolata', ;
-   /*letter-spacing: .2rem;*/
+   letter-spacing: .2rem;
    margin-right: 2px;
-   margin-left: 10%;
+   margin-left: 9%;
    text-decoration: none;
    line-height: 6.5rem;
    color: #1c1c1c;
@@ -88,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 .docs-section-center {
    text-align: center;
    width: 70%;
-   /*border-top: 1px solid #eee;*/
    padding: 4rem 0;
    margin-top: 40px;
    margin-left: auto;
@@ -152,11 +155,19 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0 20px;
    box-sizing: border-box;
 }
-.code-example {
+.container-code-wel {
+   position: relative;
+   text-align: left;
+   width: 100%;
+   max-width: 700px;
+   margin: auto;
+   box-sizing: border-box;
+}
+/*.code-example {
    margin-top: 1.5rem;
    margin-bottom: 0;
 }
 .code-example-body {
    white-space: pre;
    word-wrap: break-word text-align: left;
-}
+}*/
