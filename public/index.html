@@ -76,6 +76,12 @@
                </code>
             </pre>
          </div>
+         <div class="input">
+            <h6 style="font-family: 'Inconsolata'">In order to use favorites,
+               please enter your name:</h6>
+            <input style="font-family: 'Inconsolata'" type='text' id='name' placeholder='Enter Your Name'>
+            <p><input style="font-family: 'Inconsolata'" id="submit" class="button-primary" type="submit" value="Submit"/></p>
+         </div>
             <p style="font-family: 'Inconsolata'">Made by:</p>
             <h5 style="font-family: 'Inconsolata'">Mitchell Blank</h5>
             <h5 style="font-family: 'Inconsolata'">James Mitchell</h5>
@@ -200,17 +206,28 @@
 
       //tests for the Firebase database
       //stores the current date
-      var now_date = Date.now();
-      console.log(now_date);
-      myDataRef.set(now_date);
-      console.log(myDataRef);
+      // var now_date = Date.now();
+      // console.log(now_date);
+      // myDataRef.set(now_date);
+      // console.log(myDataRef);
+
+      var user_factory = function (name) {
+        var user = {};
+        user.name = name;
+      };
+
+      $('#submit').click(function() {
+         var usr_name = $('#name').val();
+         console.log(usr_name);
+         myDataRef.push(usr_name);
+         $('#name').val('');
+      });
 
       //jQuery effects for navigation links and divs
       $('.container-code').hide();
       $('#home').click(function() {
          $('.container-code').hide();
          $('#welcome').hide().fadeIn(1800);
-
       });
       $('#showall').click(function() {
          $('#welcome').hide();

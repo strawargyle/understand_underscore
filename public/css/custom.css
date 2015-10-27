@@ -65,7 +65,10 @@ a.tooltip:hover::before {
    display: block;
    text-align: center;
    margin: auto;
-   margin-bottom: 80px;
+   margin-bottom: 40px;
+   padding-top: 40px;
+   border-top: 1px inset black;
+   border-bottom: 1px inset black;
 }
 .value-props {
    margin-top: 4rem;
@@ -95,7 +98,7 @@ a.tooltip:hover::before {
 }
 .navbar-link {
    text-transform: uppercase;
-   font-size: 1em;
+   font-size: 0.9em;
    font-weight: 600;
    font-family: 'Inconsolata', ;
    letter-spacing: .2rem;
