@@ -11,6 +11,38 @@ body {
    font-family: 'Inconsolata', ;
    font-size: 1.7rem;
 }
+a {
+   text-decoration: none;
+}
+a.tooltip,
+a.popup {
+    position: relative;
+    color: brown;
+    white-space:normal;
+    width: 200px;
+}
+
+a.tooltip::before {
+    content: attr(data-tip);
+    width: 300px;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    top: 25px;
+    left: -50%;
+    background: #ffffff;
+    color: #3d3a3a;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+a.tooltip:hover::before {
+    display: inline-block;
+    white-space:normal;
+    opacity: 1;
+}
 .header {
    margin-top: 5rem;
    text-align: center;
