@@ -182,13 +182,11 @@ h1, h2, h3, h4, h5, h6 {
    margin-top: 0;
    margin-bottom: 2rem;
    font-weight: 100;
-   font-family: 'VT323', ;
 }
 h1 {
    font-size: 4.0rem;
    line-height: 1.2;
    letter-spacing: -.1rem;
-   font-family: 'VT323', ;
 }
 h2 {
    font-size: 3.6rem;
@@ -259,7 +257,7 @@ a:hover {
    display: inline-block;
    height: 38px;
    padding: 0 30px;
-   color: #b81c1c;
+   color: #B71C1C;
    text-align: center;
    font-size: 11px;
    font-weight: 600;
@@ -275,19 +273,19 @@ a:hover {
    box-sizing: border-box;
 }
 .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
-   color: #000;
-   border-color: #000;
+   color: #333;
+   border-color: #888;
    outline: 0;
 }
 .button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
-   color: #000;
+   color: #FFF;
    background-color: #009688;
-   border-color: #000;
+   border-color: #009688;
 }
 .button.button-primary:hover, button.button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover, .button.button-primary:focus, button.button-primary:focus, input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
    color: #FFF;
    background-color: #1EAEDB;
-   border-color: #000;
+   border-color: #1EAEDB;
 }
 
 /* Forms
@@ -298,11 +296,8 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
    padding: 6px 10px;
    /* The 6px vertically centers text on FF, ignored by Webkit */
    background-color: #fff;
-   border: 1px solid #000;
-   border-radius: 0px;
-   font-family: 'VT323', ;
-   color: #000;
-   text-align: center;
+   border: 1px solid #D1D1D1;
+   border-radius: 4px;
    box-shadow: none;
    box-sizing: border-box;
 }
@@ -320,7 +315,7 @@ textarea {
    padding-bottom: 6px;
 }
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-   border: 1px solid #000;
+   border: 1px solid #33C3F0;
    outline: 0;
 }
 label, legend {
@@ -337,7 +332,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 label > .label-body {
    display: inline-block;
-   /*margin-left: .5rem;*/
+   margin-left: .5rem;
    font-weight: normal;
 }
 
