@@ -60,8 +60,8 @@
             </ul>
          </div>
       </nav>
-      <section>
-         <div id="welcome" class="docs-section-center">
+      <section id="welcome">
+         <div class="docs-section-center">
             <img class="value-img" src="https://static1.squarespace.com/static/ta/522a22cbe4b04681b0bff826/2392/assets/img/hack-reactor-logo.png">
             <p style="font-family: 'Inconsolata'">This is the Hackathon 2015 project from the <br>Hack Reactor Remote Prep course. <br>Playing around with Javascript and jQuery.</p>
          <div class="container-code-wel">
@@ -81,6 +81,41 @@
             <h5 style="font-family: 'Inconsolata'">James Mitchell</h5>
             <h5 style="font-family: 'Inconsolata'">Jonny Nguyen</h5>
             <h5 style="font-family: 'Inconsolata'">Matthew Preiser</h5>
+            <pre>
+         </div>
+         <div class="container-code-wel2">
+            <pre>
+               <code class "javascript">
+            * Javascript for this project *
+
+            //loads the code syntax highlighter
+            hljs.initHighlightingOnLoad();
+
+            //connects to the Firebase database
+            var myDataRef =
+            new Firebase(
+            'https://understandunderscore.firebaseio.com/');
+
+            //tests for the Firebase database
+            //stores the current date
+            var now_date = Date.now();
+            console.log(now_date);
+            myDataRef.set(now_date);
+            console.log(myDataRef);
+
+            //jQuery effects for navigation links and divs
+            $('.container-code').hide();
+            $('#home').click(function() {
+               $('.container-code').hide();
+               $('#welcome').hide().fadeIn(1800);
+
+            });
+            $('#showall').click(function() {
+               $('#welcome').hide();
+               $('.container-code').hide().fadeIn(1800);
+            });
+               </code>
+            </pre>
          </div>
       </section>
    </div>
@@ -128,6 +163,27 @@
             _.each({one: 1, two: 2, three: 3}, alert);
                                  => alerts each number value in turn...
          </code>
+         <code class "javascript" id="code-example-body prettyprint" id="each">
+            _.reduce(list, iteratee, [memo], [context])
+
+            Aliases: inject, foldl
+
+            Also known as inject and foldl, reduce boils down a
+            list of values into a single value. Memo is the initial
+            state of the reduction, and each successive step of it should
+            be returned by iteratee. The iteratee is passed four arguments:
+            the memo, then the value and index (or key) of the iteration,
+            and finally a reference to the entire list.
+
+            If no memo is passed to the initial invocation of reduce,
+            the iteratee is not invoked on the first element of the list.
+            The first element is instead passed as the memo in the
+            invocation of the iteratee on the next element in the list.
+
+            var sum = _.reduce([1, 2, 3], function(memo, num){
+               return memo + num; }, 0);
+                                 => 6
+         </code>
       </pre>
    </div>
 
@@ -135,19 +191,28 @@
    <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
    <script>
+      //loads the code syntax highlighter
       hljs.initHighlightingOnLoad();
 
-      $('.container-code').hide();
+      //connects to the Firebase database
+      var myDataRef = new Firebase('https://understandunderscore.firebaseio.com/');
 
+      //tests for the Firebase database
+      //stores the current date
+      var now_date = Date.now();
+      console.log(now_date);
+      myDataRef.set(now_date);
+      console.log(myDataRef);
+
+      //jQuery effects for navigation links and divs
+      $('.container-code').hide();
       $('#home').click(function() {
          $('.container-code').hide();
          $('#welcome').hide().fadeIn(1800);
-         $('#container-code-wel').hide().fadeIn(1800);
-      });
 
+      });
       $('#showall').click(function() {
          $('#welcome').hide();
-         $('#container-code-wel').hide();
          $('.container-code').hide().fadeIn(1800);
       });
    </script>

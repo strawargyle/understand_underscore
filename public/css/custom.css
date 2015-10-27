@@ -24,7 +24,7 @@ body {
    margin: auto;
    margin-bottom: 50px;
    height: 80px;
-   width: 250px;
+   width: 260px;
 }
 .value-prop {
    margin-top: 1rem;
@@ -63,7 +63,7 @@ body {
 }
 .navbar-link {
    text-transform: uppercase;
-   font-size: 1.1em;
+   font-size: 1em;
    font-weight: 600;
    font-family: 'Inconsolata', ;
    letter-spacing: .2rem;
@@ -156,6 +156,14 @@ body {
    box-sizing: border-box;
 }
 .container-code-wel {
+   position: relative;
+   text-align: left;
+   width: 100%;
+   max-width: 800px;
+   margin: auto;
+   box-sizing: border-box;
+}
+.container-code-wel2 {
    position: relative;
    text-align: left;
    width: 100%;
