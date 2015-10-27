@@ -11,6 +11,38 @@ body {
    font-family: 'Inconsolata', ;
    font-size: 1.7rem;
 }
+a {
+   text-decoration: none;
+}
+a.tooltip,
+a.popup {
+    position: relative;
+    color: brown;
+    white-space:normal;
+    width: 200px;
+}
+
+a.tooltip::before {
+    content: attr(data-tip);
+    width: 300px;
+    position: absolute;
+    display: none;
+    z-index: 999;
+    top: 25px;
+    left: -50%;
+    background: #ffffff;
+    color: #3d3a3a;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+a.tooltip:hover::before {
+    display: inline-block;
+    white-space:normal;
+    opacity: 1;
+}
 .header {
    margin-top: 5rem;
    text-align: center;
@@ -33,7 +65,10 @@ body {
    display: block;
    text-align: center;
    margin: auto;
-   margin-bottom: 80px;
+   margin-bottom: 40px;
+   padding-top: 40px;
+   border-top: 1px inset black;
+   border-bottom: 1px inset black;
 }
 .value-props {
    margin-top: 4rem;
@@ -63,7 +98,7 @@ body {
 }
 .navbar-link {
    text-transform: uppercase;
-   font-size: 1em;
+   font-size: 0.9em;
    font-weight: 600;
    font-family: 'Inconsolata', ;
    letter-spacing: .2rem;
