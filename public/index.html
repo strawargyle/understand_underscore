@@ -33,6 +33,9 @@
    </script>
    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+   <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+   <script src="js/functions.js">
+   </script>
 
 
    <!-- Favicon
@@ -126,7 +129,7 @@
    </div>
    <div class="container-code">
       <pre class="code-example">
-         <code class "javascript" id="code-example-body prettyprint" id="map">
+         <code class "javascript" id="code-example-body prettyprint">
 
             _.map(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
 
@@ -150,6 +153,11 @@
                                  => [1, 3]
 
          </code>
+      </pre>
+      </div>
+         <div id="map-so" class="stackoverflow-links"></div>
+         <div class="container-code">
+            <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint" id="each">
             _.each(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
 
@@ -158,34 +166,43 @@
             Iterates over a list of elements, yielding each
             in turn to an iteratee function. The iteratee is
             bound to the context object, if one is passed.
-            Each invocation of iteratee is called with three arguments:
-            (element, index, list).
+            Each invocation of iteratee is called with
+            three arguments: (element, index, list).
 
-            If list is a JavaScript object, iteratee's arguments
-            will be (value, key, list). Returns the list for chaining.
+            If list is a JavaScript object, iteratee's
+            arguments will be (value, key, list). Returns
+            the list for chaining.
 
             _.each([1, 2, 3], alert);
-                                 => alerts each number in turn...
+                              => alerts each number in turn...
 
             _.each({one: 1, two: 2, three: 3}, alert);
-                                 => alerts each number value in turn...
+                              => alerts each number value in turn...
          </code>
+      </pre>
+      </div>
+      <div id="each-so" class="stackoverflow-links"></div>
+      <div class="container-code">
+         <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint" id="each">
             _.reduce(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [memo], [context])
 
             Aliases: inject, foldl
 
-            Also known as inject and foldl, reduce boils down a
-            list of values into a single value. Memo is the initial
-            state of the reduction, and each successive step of it should
-            be returned by iteratee. The iteratee is passed four arguments:
-            the memo, then the value and index (or key) of the iteration,
-            and finally a reference to the entire list.
+            Also known as inject and foldl, reduce boils
+            down a list of values into a single value. Memo
+            is the initial state of the reduction, and each
+            successive step of it should be returned by iteratee.
+            The iteratee is passed four arguments:
+            the memo, then the value and index (or key) of
+            the iteration, and finally a reference to the entire
+            list.
 
-            If no memo is passed to the initial invocation of reduce,
-            the iteratee is not invoked on the first element of the list.
-            The first element is instead passed as the memo in the
-            invocation of the iteratee on the next element in the list.
+            If no memo is passed to the initial invocation of
+            reduce, the iteratee is not invoked on the first
+            element of the list. The first element is instead
+            passed as the memo in the invocation of the iteratee
+            on the next element in the list.
 
             var sum = _.reduce([1, 2, 3], function(memo, num){
                return memo + num; }, 0);
@@ -193,6 +210,7 @@
          </code>
       </pre>
    </div>
+   <div id="reduce-so" class="stackoverflow-links"></div>
 
 
    <!-- Scripts
@@ -204,17 +222,16 @@
       //connects to the Firebase database
       var myDataRef = new Firebase('https://understandunderscore.firebaseio.com/');
 
-      //tests for the Firebase database
-      //stores the current date
-      // var now_date = Date.now();
-      // console.log(now_date);
-      // myDataRef.set(now_date);
-      // console.log(myDataRef);
+      // $('#submitsearch').click(function() {
+      //    var search_under = $('#search').val();
+      //    console.log(search_under);
+      //    $(function(){
+      //    $('#search').val('');
+      // });
 
-      var user_factory = function (name) {
-        var user = {};
-        user.name = name;
-      };
+      stack_results('map', '#map-so');
+      stack_results('each', '#each-so');
+      stack_results('reduce', '#reduce-so');
 
       $('#submit').click(function() {
          var usr_name = $('#name').val();
@@ -233,6 +250,7 @@
          $('#welcome').hide();
          $('.container-code').hide().fadeIn(1800);
       });
+
    </script>
 
    <!-- End Document

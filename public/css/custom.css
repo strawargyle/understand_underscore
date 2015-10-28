@@ -133,6 +133,12 @@ a.tooltip:hover::before {
    margin-right: auto;
    margin-bottom: auto;
 }
+.stackoverflow-links {
+   text-align: center;
+   width: 70%;
+   padding: 4rem 0;
+   margin: auto;
+}
 .inline {
    opacity: 0;
    display: block;
