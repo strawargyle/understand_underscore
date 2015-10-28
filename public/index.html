@@ -56,7 +56,7 @@
          <div class="container">
             <ul class="navbar-list">
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#" id="home">Home</a></li>
-               <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-body"id="showall">Show All</a></li><li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link"href="#code-example-favorites-body" id="favorites">Favorites</a></li><li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link"href= "#prompt"id="login">Login</a></li>
+               <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-body"id="showall">Show All</a></li><li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link"href="#favorites" id="favorites">Favorites</a></li><li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link"href= "#prompt"id="login">Login</a></li>
             </ul>
          </div>
       </nav>
@@ -122,9 +122,9 @@
    <div class="container-code">
       <pre class="code-example">
          <form action=".asp" method="get">
-  <input type="checkbox" name="map" value="add-to-favorites"> Add to Favorites<br>
-  <input type="submit" value="Submit">
-</form>
+         <input type="checkbox" name="map" value="add-to-favorites"> Add to Favorites<br>
+         <input type="submit" value="Submit">
+      </form>
          <code class "javascript" id="code-example-body prettyprint" id="map">
             _.map(list, iteratee, [context])
 
@@ -147,8 +147,10 @@
             _.map([[1, 2], [3, 4]], _.first);
                                  => [1, 3]
          </code>
+         <form action=".asp" method="get">
          <input type="checkbox" name="each" value="add-to-favorites"> Add to Favorites<br>
-  <input type="submit" value="Submit">
+         <input type="submit" value="Submit">
+         </form>
          <code class "javascript" id="code-example-body prettyprint" id="each">
             _.each(list, iteratee, [context])
 
@@ -169,8 +171,10 @@
             _.each({one: 1, two: 2, three: 3}, alert);
                                  => alerts each number value in turn...
          </code>
+         <form action=".asp" method="get">
          <input type="checkbox" name="reduce" value="add-to-favorites"> Add to Favorites<br>
-  <input type="submit" value="Submit">
+         <input type="submit" value="Submit">
+         </form>
          <code class "javascript" id="code-example-body prettyprint" id="each">
             _.reduce(list, iteratee, [memo], [context])
 
@@ -194,6 +198,9 @@
          </code>
       </pre>
    </div>
+   <div class="container-favorites">
+      <pre class="code-example-favorites-body">
+
 
 
    <!-- Scripts
@@ -223,6 +230,11 @@
          $('#welcome').hide();
          $('.container-code').hide().fadeIn(1800);
       });
+
+      // $('#favorites').click(function() {
+      //    $('#welcome').hide();
+      //    ${'.container-code'}.hide();
+      // });
    </script>
 
    <!-- End Document
