@@ -11,7 +11,7 @@ var stack_results = function (term, div) {
                console.log(list.items);
                //  console.log(data.items[0].link);
                $(div)
-                  .text(data.items[0].link);
+                  .append(data.items[0].link);
                //  $(div).text(data.items[1].link);
             });
          };

@@ -115,12 +115,12 @@
             $('.container-code').hide();
             $('#home').click(function() {
                $('.container-code').hide();
-               $('#welcome').hide().fadeIn(1800);
+               $('#welcome').hide().fadeIn(1400);
 
             });
             $('#showall').click(function() {
                $('#welcome').hide();
-               $('.container-code').hide().fadeIn(1800);
+               $('.container-code').hide().fadeIn(1400);
             });
                </code>
             </pre>
@@ -128,7 +128,7 @@
       </section>
    </div>
    <div class="container-code">
-      <pre class="code-example">
+      <pre class="code-example" id="underfunc">
          <code class "javascript" id="code-example-body prettyprint">
 
             _.map(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
@@ -155,7 +155,7 @@
          </code>
       </pre>
       </div>
-         <div id="map-so" class="stackoverflow-links"></div>
+         <div id="map-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
          <div class="container-code">
             <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint" id="each">
@@ -181,7 +181,7 @@
          </code>
       </pre>
       </div>
-      <div id="each-so" class="stackoverflow-links"></div>
+      <div id="each-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
       <div class="container-code">
          <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint" id="each">
@@ -210,7 +210,7 @@
          </code>
       </pre>
    </div>
-   <div id="reduce-so" class="stackoverflow-links"></div>
+   <div id="reduce-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
 
 
    <!-- Scripts
@@ -242,13 +242,16 @@
 
       //jQuery effects for navigation links and divs
       $('.container-code').hide();
+      $('.stackoverflow-links').hide();
       $('#home').click(function() {
          $('.container-code').hide();
-         $('#welcome').hide().fadeIn(1800);
+         $('.stackoverflow-links').hide();
+         $('#welcome').hide().fadeIn(1400);
       });
       $('#showall').click(function() {
          $('#welcome').hide();
-         $('.container-code').hide().fadeIn(1800);
+         $('.container-code').hide().fadeIn(1400);
+         $('.stackoverflow-links').fadeIn(1400);
       });
 
    </script>

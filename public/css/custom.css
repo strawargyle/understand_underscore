@@ -4,7 +4,7 @@ h1 {
 h4 {
    text-align: right;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
    font-family: 'VT323', ;
 }
 body {
@@ -135,8 +135,9 @@ a.tooltip:hover::before {
 }
 .stackoverflow-links {
    text-align: center;
-   width: 70%;
-   padding: 4rem 0;
+   font-size: 1.6rem;
+   width: 50%;
+   padding-bottom: 30px;
    margin: auto;
 }
 .inline {
@@ -215,8 +216,7 @@ a.tooltip:hover::before {
 /*.code-example {
    margin-top: 1.5rem;
    margin-bottom: 0;
-}
-.code-example-body {
-   white-space: pre;
-   word-wrap: break-word text-align: left;
 }*/
+code {
+   font-size: 1.4rem;
+}
