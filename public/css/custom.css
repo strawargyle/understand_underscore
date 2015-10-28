@@ -220,3 +220,9 @@ a.tooltip:hover::before {
 code {
    font-size: 1.4rem;
 }
+#favs{
+   margin-top: 5px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
+}
