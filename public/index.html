@@ -130,11 +130,11 @@
       </section>
    </div>
    <div class="container-code">
+      <h5 style="font-family: 'Inconsolata'">_.map</h5>
       <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint">
 
             _.map(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
-
 
             Alias: collect
 
@@ -165,6 +165,7 @@
 
 
          <div class="container-code">
+            <h5 style="font-family: 'Inconsolata'">_.each</h5>
             <pre class="code-example">
                <code class "javascript" id="code-example-body prettyprint">
             _.each(list,<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
@@ -196,6 +197,7 @@
 
 
       <div class="container-code">
+         <h5 style="font-family: 'Inconsolata'">_.reduce</h5>
          <pre class="code-example">
             <code class "javascript" id="code-example-body prettyprint">
             _.reduce(list,<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [memo], [context])
@@ -225,6 +227,28 @@
       </form>
       <div id="reduce-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
    </div>
+   <div class="container-code">
+      <h5 style="font-family: 'Inconsolata'">_.pluck</h5>
+      <pre class="code-example">
+         <code class "javascript" id="code-example-body prettyprint">
+            _.pluck(<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">list</a>, propertyName)
+
+            A convenient version of what is perhaps the most
+            common use-case for map: extracting a list of
+            property values.
+
+            var stooges = [{name: 'moe', age: 40},
+            {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+            _.pluck(stooges, 'name');
+                                 => ["moe", "larry", "curly"]
+         </code>
+      </pre>
+      <form id="favs" action=".asp" method="get">
+        <input type="checkbox" name="map" value="add-to-favorites"> Add to Favorites<br>
+        <input type="submit" value="Submit">
+      </form>
+      <div id="pluck-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+      </div>
 
 
    <!-- Scripts
@@ -239,6 +263,7 @@
       stack_results('map', '#map-so');
       stack_results('each', '#each-so');
       stack_results('reduce', '#reduce-so');
+      stack_results('pluck', '#pluck-so');
 
       $('#submit').click(function() {
          var usr_name = $('#name').val();

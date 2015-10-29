@@ -1,11 +1,14 @@
 h1 {
+   font-family: 'VT323', ;
    text-align: right;
 }
 h4 {
+   font-family: 'VT323', ;
    text-align: right;
 }
-h1, h2, h3, h4, h5 {
+h2, h3, h5 {
    font-family: 'VT323', ;
+   text-align: center;
 }
 body {
    font-family: 'Inconsolata', ;
@@ -163,8 +166,9 @@ a.tooltip:hover::before {
    text-align: left;
    width: 80%;
    max-width: 800px;
+   margin-top: 50px;
    margin: auto;
-   padding: 0 20px;
+   padding-top: 60px;
    box-sizing: border-box;
 }
 .container-code-wel {
