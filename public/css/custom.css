@@ -137,6 +137,17 @@ a.tooltip:hover::before {
    margin-right: auto;
    margin-bottom: auto;
 }
+.center {
+   text-align: center;
+   font-size: 2rem;
+   font-weight: bold;
+   width: 70%;
+   /*padding: 4rem 0;*/
+   margin-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 25px;
+}
 .docs-section-center2 {
    text-align: center;
    width: 50%;
@@ -183,6 +194,7 @@ a.tooltip:hover::before {
    margin-top: 50px;
    margin: auto;
    padding-top: 60px;
+   padding-bottom: 45px;
    box-sizing: border-box;
 }
 .container-code-wel {
@@ -213,4 +225,7 @@ code {
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 30px;
+}
+.hmtl {
+   text-align: center;
 }
