@@ -137,6 +137,20 @@ a.tooltip:hover::before {
    margin-right: auto;
    margin-bottom: auto;
 }
+.docs-section-center2 {
+   text-align: center;
+   width: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.search {
+   text-align: center;
+   width: 50%;
+   margin-top: 90px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+}
 .stackoverflow-links {
    text-align: center;
    font-size: 1.5rem;

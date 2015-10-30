@@ -61,7 +61,6 @@
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#" id="home">Home</a></li>
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-body" id="showall">Show All</a></li>
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-favorites-body" id="favorites">Favorites</a></li>
-               <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#prompt"id="login">Login</a></li>
             </ul>
          </div>
       </nav>
@@ -129,7 +128,13 @@
          </div>
       </section>
    </div>
-   <div class="container-code">
+
+   <container id="functions">
+      <div class="search" id="docs-section-center2">
+         <h6 style="font-family: 'Inconsolata'">Enter function name below</h6>
+         <input style="font-family: 'Inconsolata'" type='text' id="div" placeholder='Example: pluck'>
+      </div>
+   <div id="map" class="container-code">
       <h5 style="font-family: 'Inconsolata'">_.map</h5>
       <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint">
@@ -164,7 +169,7 @@
       </div>
 
 
-         <div class="container-code">
+         <div id="each" class="container-code">
             <h5 style="font-family: 'Inconsolata'">_.each</h5>
             <pre class="code-example">
                <code class "javascript" id="code-example-body prettyprint">
@@ -196,7 +201,7 @@
       </div>
 
 
-      <div class="container-code">
+      <div id="reduce" class="container-code">
          <h5 style="font-family: 'Inconsolata'">_.reduce</h5>
          <pre class="code-example">
             <code class "javascript" id="code-example-body prettyprint">
@@ -227,7 +232,7 @@
       </form>
       <div id="reduce-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
    </div>
-   <div class="container-code">
+   <div  id="pluck" class="container-code">
       <h5 style="font-family: 'Inconsolata'">_.pluck</h5>
       <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint">
@@ -249,6 +254,7 @@
       </form>
       <div id="pluck-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
       </div>
+   </container>
 
 
    <!-- Scripts
@@ -275,6 +281,7 @@
       //jQuery effects for navigation links and divs
       $('.container-code').hide();
       $('.stackoverflow-links').hide();
+      $('.search').hide();
       $('#home').click(function() {
          $('.container-code').hide();
          $('.stackoverflow-links').hide();
@@ -282,9 +289,43 @@
       });
       $('#showall').click(function() {
          $('#welcome').hide();
+         $('.search').hide().fadeIn(1400);
          $('.container-code').hide().fadeIn(1400);
          $('.stackoverflow-links').fadeIn(1400);
       });
+      // $('#search').click(function() {
+      //    $('#welcome').hide();
+      //    $('#functions').hide();
+      //    $('.search').hide().fadeIn(1400);
+      // });
+      $('#div').keypress(function(e) {
+         if (e.keyCode == 13) {
+         var div_search = $('#div').val();
+         console.log(div_search);
+         if (div_search === 'map') {
+            $('#map').hide().fadeIn(1400);
+            $('#each').hide();
+            $('#reduce').hide();
+            $('#pluck').hide();
+         } else if (div_search === 'each') {
+            $('#each').hide().fadeIn(1400);
+            $('#map').hide();
+            $('#reduce').hide();
+            $('#pluck').hide();
+         } else if (div_search === 'reduce') {
+            $('#reduce').hide().fadeIn(1400);
+            $('#map').hide();
+            $('#each').hide();
+            $('#pluck').hide();
+         } else if (div_search === 'pluck') {
+            $('#pluck').hide().fadeIn(1400);
+            $('#map').hide();
+            $('#reduce').hide();
+            $('#each').hide();
+         }
+         $('#div').val('');
+      }
+      })
    </script>
 
    <!-- End Document
