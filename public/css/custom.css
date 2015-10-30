@@ -1,11 +1,14 @@
 h1 {
+   font-family: 'VT323', ;
    text-align: right;
 }
 h4 {
+   font-family: 'VT323', ;
    text-align: right;
 }
-h1, h2, h3, h4, h5 {
+h2, h3, h5 {
    font-family: 'VT323', ;
+   text-align: center;
 }
 body {
    font-family: 'Inconsolata', ;
@@ -13,6 +16,7 @@ body {
 }
 a {
    text-decoration: none;
+   font-family: 'Inconsolata', ;
 }
 a.tooltip,
 a.popup {
@@ -133,12 +137,39 @@ a.tooltip:hover::before {
    margin-right: auto;
    margin-bottom: auto;
 }
+.center {
+   text-align: center;
+   font-size: 2rem;
+   font-weight: bold;
+   width: 70%;
+   /*padding: 4rem 0;*/
+   margin-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 25px;
+}
+.docs-section-center2 {
+   text-align: center;
+   width: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.search {
+   text-align: center;
+   width: 50%;
+   margin-top: 90px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0;
+}
 .stackoverflow-links {
    text-align: center;
-   font-size: 1.6rem;
-   width: 50%;
+   font-size: 1.5rem;
+   width: 60%;
    padding-bottom: 30px;
+   border-bottom: 1px inset black;
    margin: auto;
+   font-family: 'Inconsolata', ;
 }
 .inline {
    opacity: 0;
@@ -150,51 +181,20 @@ a.tooltip:hover::before {
    margin-right: auto;
    border: solid black 3px;
 }
-.fizzbuzz {
-   font-size: 1.5em;
-   font-family: 'VT323', ;
-   color: #F44336;
-   text-align: center;
-}
-.fizz {
-   font-size: 1.5em;
-   color: #2196F3;
-   text-align: center;
-}
-.buzz {
-   font-size: 1.5em;
-   color: #F57F17;
-   text-align: center;
-}
-#usrNums {
-   font-size: 1.2em;
-   color: #4E342E;
-   text-align: center;
-}
-#fizzy {
-   text-align: center;
-}
 .u-full-width {
    width: 60%;
    box-sizing: border-box;
 }
-.container-fizz {
-   position: relative;
-   text-align: center;
-   width: 60%;
-   max-width: 800px;
-   margin: auto;
-   padding: 0 20px;
-   box-sizing: border-box;
-   margin-top: 2rem;
-}
 .container-code {
+   font-family: 'Inconsolata', ;
    position: relative;
    text-align: left;
-   width: 60%;
+   width: 80%;
    max-width: 800px;
+   margin-top: 50px;
    margin: auto;
-   padding: 0 20px;
+   padding-top: 60px;
+   padding-bottom: 45px;
    box-sizing: border-box;
 }
 .container-code-wel {
@@ -225,4 +225,7 @@ code {
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 30px;
+}
+.hmtl {
+   text-align: center;
 }
