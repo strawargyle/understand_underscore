@@ -27,20 +27,20 @@
 
    <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <script src="https://code.jquery.com/jquery-2.1.1.js">
-   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js">
-   </script>
-   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-   <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
-   <script src="js/functions.js">
-   </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js">
+    </script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+    <script src="js/functions.js">
+    </script>
 
 
    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+   <link rel="icon" type="image/png" href="css/favicon.png">
 
 </head>
 
@@ -60,8 +60,7 @@
             <ul class="navbar-list">
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#" id="home">Home</a></li>
                <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-body" id="showall">Show All</a></li>
-               <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-favorites-body" id="favorites">Favorites</a></li>
-               <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#prompt"id="login">Login</a></li>
+               <!-- <li class="navbar-item"><a style="font-family: 'Inconsolata'" class="navbar-link" href="#code-example-favorites-body" id="favorites">Favorites</a></li> -->
             </ul>
          </div>
       </nav>
@@ -72,15 +71,22 @@
          <div class="container-code-wel">
             <pre>
                <code class "hmtl">
-            Understand the power and convenience of using
-            the Underscore.js library. We have organized
-            the most used functions and broken them down
-            in order to better understand their inner workings.
+              Understand the power and convenience of using
+              the Underscore.js library. We have organized some
+              of the most used functions and presented them in
+              an easy to read format.
 
-            We have no idea what we are doing.
+                      We have no idea what we are doing.
                </code>
             </pre>
+            <div class="input">
+               <h6 style="font-family: 'Inconsolata'">In order to use favorites, please enter your name:</h6>
+               <input style="font-family: 'Inconsolata'" type='text' id='name' placeholder='Enter Your Name'>
+               <div id="usernamewel"style="font-family: 'Inconsolata'"></div>
+               <br><br>
+            </div>
          </div>
+         <br><br>
             <p style="font-family: 'Inconsolata'">Made by:</p>
             <h5 style="font-family: 'Inconsolata'">Mitchell Blank</h5>
             <h5 style="font-family: 'Inconsolata'">James Mitchell</h5>
@@ -88,53 +94,20 @@
             <h5 style="font-family: 'Inconsolata'">Matthew Preiser</h5>
             <pre>
          </div>
-         <div class="input">
-            <h6 style="font-family: 'Inconsolata'">In order to use favorites, please enter your name:</h6>
-            <input style="font-family: 'Inconsolata'" type='text' id='name' placeholder='Enter Your Name'>
-            <p><input style="font-family: 'Inconsolata'" id="submit" class="button-primary" type="submit" value="Submit" /></p>
-         </div>
-         <div class="container-code-wel2">
-            <pre>
-               <code class "javascript">
-            * Javascript for this project *
-
-            //loads the code syntax highlighter
-            hljs.initHighlightingOnLoad();
-
-            //connects to the Firebase database
-            var myDataRef =
-            new Firebase(
-            'https://understandunderscore.firebaseio.com/');
-
-            //tests for the Firebase database
-            //stores the current date
-            var now_date = Date.now();
-            console.log(now_date);
-            myDataRef.set(now_date);
-            console.log(myDataRef);
-
-            //jQuery effects for navigation links and divs
-            $('.container-code').hide();
-            $('#home').click(function() {
-               $('.container-code').hide();
-               $('#welcome').hide().fadeIn(1400);
-
-            });
-            $('#showall').click(function() {
-               $('#welcome').hide();
-               $('.container-code').hide().fadeIn(1400);
-            });
-               </code>
-            </pre>
-         </div>
       </section>
    </div>
-   <div class="container-code">
+   <container id="functions">
+      <div class="search" id="docs-section-center2">
+         <div id="usernamewel2"style="font-family: 'Inconsolata'"></div>
+         <h6 style="font-family: 'Inconsolata'">Enter function name below</h6>
+         <input style="font-family: 'Inconsolata'" type='text' id="div" placeholder='Example: pluck'>
+      </div>
+   <div id="map" class="container-code">
+      <h5 style="font-family: 'Inconsolata'">_.map</h5>
       <pre class="code-example">
          <code class "javascript" id="code-example-body prettyprint">
 
             _.map(list, <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
-
 
             Alias: collect
 
@@ -156,14 +129,40 @@
                                  => [1, 3]
          </code>
       </pre>
-      <form id="favs" action=".asp" method="get">
+      <form class="center" id="favs" action=".asp" method="get">
         <input type="checkbox" name="map" value="add-to-favorites"> Add to Favorites<br>
-        <input type="submit" value="Submit">
       </form>
+      <div id="map-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
       </div>
 
-         <div id="map-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
-         <div class="container-code">
+      <div id="filter" class="container-code">
+         <h5 style="font-family: 'Inconsolata'">_.filter</h5>
+         <pre class="code-example">
+            <code class "javascript" id="code-example-body prettyprint">
+
+               _.filter(list,  <a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
+
+               Alias: select
+
+               Looks through each value in the list, returning
+               an array of all the values that pass a truth
+               test (predicate).
+
+               var evens = _.filter([1, 2, 3, 4, 5, 6],
+               function(num){ return num % 2 == 0; });
+                                 => [2, 4, 6]
+            </code>
+         </pre>
+         <form class="center" id="favs" action=".asp" method="get">
+           <input type="checkbox" name="filter" value="add-to-favorites"> Add to Favorites<br>
+
+         </form>
+         <div id="filter-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+         </div>
+
+
+         <div id="each" class="container-code">
+            <h5 style="font-family: 'Inconsolata'">_.each</h5>
             <pre class="code-example">
                <code class "javascript" id="code-example-body prettyprint">
             _.each(list,<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [context])
@@ -186,14 +185,15 @@
                                  => alerts each number value in turn...
          </code>
       </pre>
-      <form id="favs" action=".asp" method="get">
+      <form class="center" id="favs" action=".asp" method="get">
         <input type="checkbox" name="each" value="add-to-favorites"> Add to Favorites<br>
-        <input type="submit" value="Submit">
       </form>
-      </div>
       <div id="each-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+      </div>
 
-      <div class="container-code">
+
+      <div id="reduce" class="container-code">
+         <h5 style="font-family: 'Inconsolata'">_.reduce</h5>
          <pre class="code-example">
             <code class "javascript" id="code-example-body prettyprint">
             _.reduce(list,<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">iteratee</a>, [memo], [context])
@@ -217,12 +217,62 @@
                                  => 6
          </code>
       </pre>
-      <form  id="favs" action=".asp" method="get">
+      <form class="center" id="favs" action=".asp" method="get">
         <input type="checkbox" name="reduce" value="add-to-favorites"> Add to Favorites<br>
-        <input type="submit" value="Submit">
       </form>
+      <div id="reduce-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
    </div>
-   <div id="reduce-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+
+   <div id="find" class="container-code">
+      <h5 style="font-family: 'Inconsolata'">_.find</h5>
+      <pre class="code-example">
+         <code class "javascript" id="code-example-body prettyprint">
+
+            _.find(<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">list</a>, predicate, [context])
+
+            Alias: detect
+
+            Looks through each value in the list, returning
+            the first one that passes a truth test (predicate),
+            or undefined if no value passes the test. The
+            function returns as soon as it finds an acceptable
+            element, and doesn't traverse the entire list.
+
+            var even = _.find([1, 2, 3, 4, 5, 6],
+            function(num){
+               return num % 2 == 0; });
+                                 => 2
+      </code>
+   </pre>
+   <form class="center" id="favs" action=".asp" method="get">
+     <input type="checkbox" name="find" value="add-to-favorites"> Add to Favorites<br>
+   </form>
+   <div id="find-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+</div>
+
+   <div  id="pluck" class="container-code">
+      <h5 style="font-family: 'Inconsolata'">_.pluck</h5>
+      <pre class="code-example">
+         <code class "javascript" id="code-example-body prettyprint">
+            _.pluck(<a href="javascript:void(0)" class="tooltip" data-tip="The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list.">list</a>, propertyName)
+
+            A convenient version of what is perhaps the most
+            common use-case for map: extracting a list of
+            property values.
+
+            var stooges = [{name: 'moe', age: 40},
+            {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+            _.pluck(stooges, 'name');
+                                 => ["moe", "larry", "curly"]
+         </code>
+      </pre>
+      <form class="center" id="favs" action=".asp" method="get">
+        <input type="checkbox" name="pluck" value="add-to-favorites"> Add to Favorites<br>
+      </form>
+      <div id="pluck-so" class="stackoverflow-links"><h6 style="font-family: 'Inconsolata', 'color': '#bf4444'">Current top links from stackoverflow:</h6></div>
+   </div>
+   </container>
+
 
    <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -230,33 +280,64 @@
       //loads the code syntax highlighter
       hljs.initHighlightingOnLoad();
 
-      //connects to the Firebase database
-      var myDataRef = new Firebase('https://understandunderscore.firebaseio.com/');
-
       stack_results('map', '#map-so');
       stack_results('each', '#each-so');
       stack_results('reduce', '#reduce-so');
+      stack_results('pluck', '#pluck-so');
+      stack_results('filter', '#filter-so');
+      stack_results('find', '#find-so');
 
-      $('#submit').click(function() {
+      var myDataRef = new Firebase('https://understandunderscore.firebaseio.com/Users');
+      var myFavorites = [];
+
+      $('#name').keypress(function(e) {
+         if (e.keyCode == 13) {
          var usr_name = $('#name').val();
-         console.log(usr_name);
-         myDataRef.push(usr_name);
-         $('#name').val('');
-      });
+         $('#usernamewel').html("<h5>Welcome "+usr_name+"!</h5>");
+         $('#usernamewel2').html("<h5>Welcome "+usr_name+"!</h5>");
+         myDataRef.push({
+            favorites: myFavorites,
+            user_name: usr_name
+         });
+         myDataRef.orderByChild("user_name").equalTo(usr_name).on("child_added", function(snapshot) {
+          });
+          $('#name').val('');
+            }
+         });
 
-      //jQuery effects for navigation links and divs
       $('.container-code').hide();
       $('.stackoverflow-links').hide();
+      $('#docs-section-center2').hide();
       $('#home').click(function() {
          $('.container-code').hide();
          $('.stackoverflow-links').hide();
          $('#welcome').hide().fadeIn(1400);
+         $('#docs-section-center2').hide();
       });
       $('#showall').click(function() {
          $('#welcome').hide();
+         $('.search').hide().fadeIn(1400);
          $('.container-code').hide().fadeIn(1400);
          $('.stackoverflow-links').fadeIn(1400);
       });
+      $('#div').keypress(function(e) {
+         if (e.keyCode == 13) {
+         search();
+         }
+      });
+
+      // $('#favs').click(function() {
+      //    if ($('#favs').click('#each')) {
+      //       $('#each').toggle();
+      //    }
+      //    if ($('#favs').click('#each')) {
+      //       $('#pluck').toggle();
+      //    }
+      //    if ($('#favs').click('#each')) {
+      //       $('#pluck').toggle();
+      //    }
+      // });
+
    </script>
 
    <!-- End Document
