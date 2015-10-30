@@ -16,3 +16,30 @@ var stack_results = function (term, div) {
       }
    });
 };
+
+var search = function() {
+var div_search = $('#div').val();
+console.log(div_search);
+if (div_search === 'map') {
+   $('#map').hide().fadeIn(1400);
+   $('#each').hide();
+   $('#reduce').hide();
+   $('#pluck').hide();
+} else if (div_search === 'each') {
+   $('#each').hide().fadeIn(1400);
+   $('#map').hide();
+   $('#reduce').hide();
+   $('#pluck').hide();
+} else if (div_search === 'reduce') {
+   $('#reduce').hide().fadeIn(1400);
+   $('#map').hide();
+   $('#each').hide();
+   $('#pluck').hide();
+} else if (div_search === 'pluck') {
+   $('#pluck').hide().fadeIn(1400);
+   $('#map').hide();
+   $('#reduce').hide();
+   $('#each').hide();
+}
+$('#div').val('');
+};
